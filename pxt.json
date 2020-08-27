@@ -1,0 +1,22 @@
+{
+    "name": "New-BitRacer",
+    "version": "0.0.4",
+    "description": "BitRacer test",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "BitRacer.ts",
+        "_locales/zh/BitRacer-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}
