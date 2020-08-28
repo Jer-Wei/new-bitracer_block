@@ -1,6 +1,6 @@
 //
 const N76_ADDR = 0x10
-//% weight=0 color=#f98020 icon="\uf1ba" block="BitRacer"
+//% weight=0 color=#f98020 icon="\uf1b0" block="BitRacer_New"
 namespace BitRacer {
     export enum Motors {
         //% blockId="left motor" block="left"
