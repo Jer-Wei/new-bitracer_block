@@ -105,20 +105,15 @@ namespace BitRacer {
     //% LedPin.fieldEditor="gridpicker" LedPin.fieldOptions.columns=1
     //% status.fieldEditor="gridpicker" status.fieldOptions.columns=1
 	export function LED(LedPin: LEDs,status: LEDswitch): void {
-        if (LedPin == LEDs.LED_R)
-		{
+        if (LedPin == LEDs.LED_R) {
             pins.digitalWritePin(DigitalPin.P8, status)
-		}
-        else if (LedPin == LEDs.LED_L)
-		{
+		} else if (LedPin == LEDs.LED_L) {
             pins.digitalWritePin(DigitalPin.P16, status)
 		}
     }
-	
-	
 	//% color=#2080ff
-	//% weight=30
-	//% blockId=sensor_StartSampling block="Calibrate Begin"
+	//% weight=55
+	//% blockId=sensor_StartSampling block="紅外線校正開始"
     export function CalibrateBegin(): void {
         pins.i2cWriteNumber(
             N76_ADDR,
@@ -127,10 +122,9 @@ namespace BitRacer {
             false
         )
     }
-	
 	//% color=#2080ff
-	//% weight=20
-    //% blockId=sensor_EndSampling block="Calibrate End|%Color (Line)"
+	//% weight=50
+    //% blockId=sensor_EndSampling block="紅外線校正完成|%Color 線"
     //% Color.fieldEditor="gridpicker" Color.fieldOptions.columns=1
 	export function CalibrateEnd(Color: LineColor): void {
         pins.i2cWriteNumber(
@@ -140,9 +134,8 @@ namespace BitRacer {
             false
         )
     }
-	
 	//% color=#2080ff
-    //% weight=10
+    //% weight=40
     //% blockId=sensor_Line block="read Line position"
     export function readLine(): number {
         pins.i2cWriteNumber(
