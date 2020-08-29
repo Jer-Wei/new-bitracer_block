@@ -1,6 +1,6 @@
 # tools
 
-這是專為BitRacer測試用的micro:bit積木
+這是專為2020版本的BitRacer修正的micro:bit積木
 
 ## License
 

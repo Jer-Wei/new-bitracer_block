@@ -8,12 +8,9 @@
     },
     "files": [
         "README.md",
-        "BitRacer.ts",
-        "_locales/zh/BitRacer-strings.json"
+        "BitRacer.ts"
     ],
-    "testFiles": [
-        "test.ts"
-    ],
+    "testFiles": [],
     "public": true,
     "supportedTargets": [
         "microbit"
