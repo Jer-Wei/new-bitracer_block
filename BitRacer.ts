@@ -1,43 +1,43 @@
 //
 const N76_ADDR = 0x10
-//% weight=0 color=#f98020 icon="\uf1ba" block="BitRacer_New"
+//% weight=0 color=#f98020 icon="\uf1ba" block="新版BitRacer"
 namespace BitRacer {
     export enum Motors {
-        //% blockId="left motor" block="left"
+        //% blockId="left motor" block="左輪"
         M_R = 0,
-        //% blockId="right motor" block="right"
+        //% blockId="right motor" block="右輪"
         M_L = 1,
-        //% blockId="all motor" block="all"
+        //% blockId="all motor" block="雙輪"
         All = 2
     }
     export enum IR_Sensors {
-        //% blockId="IR1_Sensors" block="IR1"
+        //% blockId="IR1_Sensors" block="紅外線1"
         IR1 = 0x03,
-        //% blockId="IR2_Sensors" block="IR2"
+        //% blockId="IR2_Sensors" block="紅外線2"
         IR2 = 0x04,
-        //% blockId="IR3_Sensors" block="IR3"
+        //% blockId="IR3_Sensors" block="紅外線3"
         IR3 = 0x05,
-        //% blockId="IR4_Sensors" block="IR4"
+        //% blockId="IR4_Sensors" block="紅外線4"
         IR4 = 0x06,
-        //% blockId="IR5_Sensors" block="IR5"
+        //% blockId="IR5_Sensors" block="紅外線5"
         IR5 = 0x07
     }	
 	export enum LineColor {
-        //% blockId="White" block="White"
+        //% blockId="White" block="白線"
         White = 0x0A,
-        //% blockId="Black" block="Black"
+        //% blockId="Black" block="黑線"
         Black = 0x0B
     }
 	export enum LEDs {
-        //% blockId="LED_right" block="right"
+        //% blockId="LED_right" block="右LED"
         LED_R = 8,
-        //% blockId="LED_left" block="left"
+        //% blockId="LED_left" block="左LED"
         LED_L = 16
     }
 	export enum LEDswitch {
-        //% blockId="on" block="on"
+        //% blockId="on" block="開啟"
         on = 0,
-        //% blockId="off" block="off"
+        //% blockId="off" block="關閉"
         off = 1
     }
     
@@ -92,6 +92,13 @@ namespace BitRacer {
             false
         )
         return pins.i2cReadNumber(N76_ADDR, NumberFormat.UInt16BE, false)
+    }
+	//% weight=83
+	//% blockId=sensor_readIRAll block="read All IRsensors"
+	//% SensorIDs.min=0 SensorIDs.max=4
+    export function readIRAll() {
+
+
     }
 	//% weight=80
     //% blockId=LED_Set block="LED|%LedPin|%status"
